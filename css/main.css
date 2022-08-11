@@ -3,3 +3,163 @@
 @-o-viewport { width: device-width; scale: 1; }
 @-webkit-viewport { width: device-width; scale: 1; }
 @viewport { width: device-width; scale: 1; }
+html {
+  box-sizing: border-box;
+  font-family: kepler-std-semicondensed, serif;
+  font-style: normal;
+  background-color: #FFF;
+}
+
+body {
+  margin: auto;
+  width: 1300px;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+nav a, nav a:visited {
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.hero {
+  display: grid;;
+  grid-template: "hero";
+  place-items: center;
+  place-content: center;
+  overflow: hidden;
+  margin: 0 auto 5rem;
+  position: relative;
+}
+
+.hero > * {
+  grid-area: hero;
+  max-width: 100%;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero h1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding-left: 3rem;
+}
+
+.about {
+  display: flex;
+  width: 900px;
+  margin: 0 auto 5rem;
+}
+
+.abt-container {
+  padding: 0 3rem;
+  text-align: right;
+  border: 0.5px solid #000;
+  border-right: 0;
+}
+
+.work {
+  width: 900px;
+  margin: 0 auto 5rem;
+}
+
+.work-container {
+  padding: 0 10rem;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 2rem 0;
+}
+
+article {
+  flex: 250px;
+  max-width: 250px;
+}
+
+article img {
+  vertical-align: middle;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.p-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #777;
+  opacity: 0;
+  transition: .2s ease;
+}
+
+article:hover .overlay {
+  opacity: 100%;
+}
+
+.text {
+  position: absolute;
+  bottom: 1rem;
+  padding: 1rem;
+}
+
+.work, .contact, .socials {
+  align-items: center;
+  text-align: center;
+}
+
+.contact {
+  width: 900px;
+  margin: auto;
+}
+
+footer {
+  border-top: 2px solid #666;
+}
