@@ -2,12 +2,22 @@
 @-ms-viewport { width: device-width; scale: 1; }
 @-o-viewport { width: device-width; scale: 1; }
 @-webkit-viewport { width: device-width; scale: 1; }
-@viewport { width: device-width; scale: 1; }
+
+@font-face {
+    font-family: 'Cigra';
+    src: url('../font/cigra-regular.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
 html {
   box-sizing: border-box;
   font-family: kepler-std-semicondensed, serif;
   font-style: normal;
-  background-color: #FFF;
+  color: #DBCEAC;
+  background-image: url('../img/background.jpg');
+  background-position: center;
+  background-color: #121f31;
 }
 
 body {
@@ -22,6 +32,12 @@ header {
   align-items: center;
 }
 
+header a {
+  margin: 0;
+  text-decoration: none;
+  height: 70px;
+}
+
 nav ul {
   margin: 0;
   padding: 0;
@@ -30,12 +46,24 @@ nav ul {
 }
 
 nav a, nav a:visited {
-  text-decoration: none;
   padding: 0.6rem 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #DBCEAC;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #ab8e40;
+  transition: 0.2s ease;
+}
+
+h1, h2 {
+  font-family: Cigra;
 }
 
 h1 {
-  font-size: 2rem;
+    font-size: 2.3rem;
 }
 
 h2 {
@@ -48,8 +76,8 @@ h3 {
 }
 
 .hero {
-  display: grid;;
-  grid-template: "hero";
+  display: grid;
+  grid-template-areas: "banner";
   place-items: center;
   place-content: center;
   overflow: hidden;
@@ -58,7 +86,7 @@ h3 {
 }
 
 .hero > * {
-  grid-area: hero;
+  grid-area: banner;
   max-width: 100%;
 }
 
@@ -86,7 +114,7 @@ h3 {
 .abt-container {
   padding: 0 3rem;
   text-align: right;
-  border: 0.5px solid #000;
+  border: 0.5px solid #DBCEAC;
   border-right: 0;
 }
 
@@ -135,19 +163,37 @@ article img {
   right: 0;
   height: 100%;
   width: 100%;
-  background-color: #777;
+  background-color: #121f31;
   opacity: 0;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 article:hover .overlay {
   opacity: 100%;
+  border: 1px solid #DBCEAC;
 }
 
 .text {
   position: absolute;
   bottom: 1rem;
   padding: 1rem;
+}
+
+.text p {
+  margin-bottom: 3rem;
+}
+
+.button {
+  text-decoration: none;
+  background-color: #000;
+  color: #FFF;
+  padding: 1rem;
+}
+
+.button:hover {
+  background-color: #DBCEAC;
+  color: #121f31;
+  transition: 0.2s ease;
 }
 
 .work, .contact, .socials {
@@ -160,6 +206,34 @@ article:hover .overlay {
   margin: auto;
 }
 
+.form input{
+  width: 33.7%;
+  padding: 0.3rem;
+  margin: 0 0.3rem 1rem 0.3rem;
+  font-family: kepler-std-semicondensed, serif;
+}
+
+.form textarea {
+  font-family: kepler-std-semicondensed, serif;
+}
+
 footer {
-  border-top: 2px solid #666;
+  margin: 3rem 0 0 0;
+  padding: 1rem 0;
+  border-top: 2px solid #DBCEAC;
+}
+
+.socials a, .socials a:visited {
+  text-decoration: none;
+  color: #DBCEAC;
+  padding: 0 0.5rem;
+}
+
+.socials a:hover {
+  color: #ab8e40;
+  transition: 0.2s ease;
+}
+
+.socials p{
+  margin-top: 0.3rem;
 }
