@@ -22,7 +22,7 @@ html {
 
 body {
   margin: auto;
-  width: 1300px;
+  width: 1000px;
   align-items: center;
 }
 
@@ -59,7 +59,7 @@ nav a:hover {
 }
 
 h1, h2 {
-  font-family: Cigra;
+  font-family: Cigra, serif;
 }
 
 h1 {
@@ -170,7 +170,8 @@ article img {
 
 article:hover .overlay {
   opacity: 100%;
-  border: 1px solid #DBCEAC;
+  outline: 1px solid #DBCEAC;
+  outline-offset: -8px;
 }
 
 .text {
@@ -206,21 +207,10 @@ article:hover .overlay {
   margin: auto;
 }
 
-.form input{
-  width: 33.7%;
-  padding: 0.3rem;
-  margin: 0 0.3rem 1rem 0.3rem;
-  font-family: kepler-std-semicondensed, serif;
-}
-
-.form textarea {
-  font-family: kepler-std-semicondensed, serif;
-}
-
 footer {
   margin: 3rem 0 0 0;
   padding: 1rem 0;
-  border-top: 2px solid #DBCEAC;
+  border-top: 1px solid #DBCEAC;
 }
 
 .socials a, .socials a:visited {
